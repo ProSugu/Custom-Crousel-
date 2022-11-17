@@ -1,0 +1,28 @@
+<app-carousel [cardIndexToshow]="cardIndexToshow" [enableNextBut]="enableNextBut" [numberOfSliderToShow]="numberOfSliderToShow" (updateSettings)="updateSettings($event)">
+    <div>
+        <app-carousel-item [isCore]="cardsArrayToShow[cardIndexToshow] === core" *ngIf="cardsArrayToShow.includes(1) && cardsArrayToShow[cardIndexToshow] === 1">
+            <app-card1 (checkBoxChangeEvent)="onCheckBoxChange($event)">
+            </app-card1>
+        </app-carousel-item>
+
+        <app-carousel-item [isCore]="cardsArrayToShow[cardIndexToshow] === core" *ngIf="cardsArrayToShow.includes(2) && cardsArrayToShow[cardIndexToshow] === 2">
+            <app-card2 (checkBoxChangeEvent)="onCheckBoxChange($event)"></app-card2>
+        </app-carousel-item>
+
+        <app-carousel-item [isCore]="cardsArrayToShow[cardIndexToshow] === core" *ngIf="cardsArrayToShow.includes(3) && cardsArrayToShow[cardIndexToshow] === 3">
+            <app-card3 (checkBoxChangeEvent)="onCheckBoxChange($event)"></app-card3>
+        </app-carousel-item>
+
+        <app-carousel-item [isCore]="cardsArrayToShow[cardIndexToshow] === core" *ngIf="cardsArrayToShow.includes(4) && cardsArrayToShow[cardIndexToshow] === 4">
+            <app-card4 (checkBoxChangeEvent)="onCheckBoxChange($event)"></app-card4>
+        </app-carousel-item>
+
+        <app-carousel-item [isCore]="cardsArrayToShow[cardIndexToshow] === core" *ngIf="cardsArrayToShow.includes(5) && cardsArrayToShow[cardIndexToshow] === 5">
+            <app-card5 (checkBoxChangeEvent)="onCheckBoxChange($event)"></app-card5>
+        </app-carousel-item>
+
+        <app-carousel-item [isCore]="cardsArrayToShow[cardIndexToshow] === core" *ngIf="cardsArrayToShow.includes(6) && cardsArrayToShow[cardIndexToshow] === 6">
+            <app-card6 (checkBoxChangeEvent)="onCheckBoxChange($event)"></app-card6>
+        </app-carousel-item>
+    </div>
+</app-carousel>

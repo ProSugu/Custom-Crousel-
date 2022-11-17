@@ -1,0 +1,13 @@
+<ng-content></ng-content>
+
+
+<button (click)="prev()" [disabled]="cardIndexToshow === 0">Prev</button>
+<button (click)="next()" [disabled]="cardIndexToshow === numberOfSliderToShow || !enableNextBut">Next</button>
+
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <ng-container *ngFor="let item of [].constructor(numberOfSliderToShow+1); let i = index">
+        <span class="dot" [ngClass]="cardIndexToshow === i? 'active':''" (click)="updateCardIndex(i)"></span>
+    </ng-container>
+</div>

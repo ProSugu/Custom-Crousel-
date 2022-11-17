@@ -1,0 +1,17 @@
+<div style="background-color:lightgrey;">
+    <ng-content></ng-content>
+</div>
+
+
+
+<div class="lessons-list" *ngIf="isCore else loading">
+    <ng-container>
+        <p> This is the core of slider</p>
+    </ng-container>
+</div>
+
+<ng-template #loading>
+    <ng-container>
+        <p>This slider is not core</p>
+    </ng-container>
+</ng-template>
